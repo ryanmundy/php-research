@@ -34,7 +34,7 @@
                 $operator = $_GET['operator'];
                 switch($operator){
                     case "None":
-                        echo "You need to select an operator";
+                        echo "Please select an operator";
                     break;
                     case "+":
                         echo $result1 + $result2;
