@@ -1,61 +1,58 @@
 <html>
-
 <head>
-<title>Hello World</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PHP Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
-<body>
 
-<!-- <form action="process.php" method="post">
-    Enter Your Name:<input name="name" type="text">
-    <input type="submit">
-</form> -->
-How old are you?
-<form action="process2.php" method="post">
-    Enter Your Name:<input name="name" type="text">
-    Enter Your Birth Year:<input name="birthYear" type="number">
-    <input type="submit">
-</form>
+<body id="body">
 
-<?php
+    <h1>PHP Calculator</h1>
+    <div id="calculator">
+        <form>
+            <input name="num1" type="number" placeholder="Number 1">
+            <select name="operator">
+                <option>None</option>
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+            <input name="num2" type="number" placeholder="Number 2">
+            =
+            <button name="submit" value="submit" type="submit">Calculate</button>
+        </form>
+        <p>The answer is: </p>
 
-// $myvar= "This is my variable";
-// echo $myvar;//echo outputs to display
+        <?php
 
-// $number=5;
-// $number2=3;
-// $sum=$number + $number2;
-// echo $sum;
+            if(isset($_GET['submit'])){
+                $result1 = $_GET['num1'];
+                $result2 = $_GET['num2'];
+                $operator = $_GET['operator'];
+                switch($operator){
+                    case "None":
+                        echo "You need to select an operator";
+                    break;
+                    case "+":
+                        echo $result1 + $result2;
+                    break; 
+                    case "-":
+                        echo $result1 - $result2;
+                    break; 
+                    case "*":
+                        echo $result1 * $result2;
+                    break; 
+                    case "/":
+                        echo $result1 / $result2;
+                    break;     
+                }
+            }
 
-// $name="Jake";
-// echo "Hello, $name";
+        ?>
 
-// $loggedIn = true;
-
-// if($loggedIn == true){
-//     echo "You are logged in";
-// } else{
-//     echo "Please log in";
-// }
-
-// $people = array("Ryan", "John", "Joe");
-// print_r($people);
-// echo $people[2];
-
-// foreach($people as $person){
-//     echo $person . ' ';
-// }
-
-$numbers = array(5, 3, 7);
-$sum = 0;
-
-foreach ($numbers as $number){
-    $sum = $sum + $number;
-}
-
-echo $sum;
-
-
-?>
-
+    </div>
 </body>
 </html>

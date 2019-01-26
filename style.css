@@ -1,0 +1,16 @@
+#calculator{
+    text-align: center;
+    margin: 50px;
+    border: solid black;
+    padding: 20px;
+    background-color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#body{
+    background-color: lightgrey;
+}
