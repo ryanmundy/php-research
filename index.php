@@ -5,8 +5,14 @@
 </head>
 <body>
 
-<form action="process.php" method="post">
+<!-- <form action="process.php" method="post">
     Enter Your Name:<input name="name" type="text">
+    <input type="submit">
+</form> -->
+How old are you?
+<form action="process2.php" method="post">
+    Enter Your Name:<input name="name" type="text">
+    Enter Your Birth Year:<input name="birthYear" type="number">
     <input type="submit">
 </form>
 
